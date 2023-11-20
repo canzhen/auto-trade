@@ -1,0 +1,1 @@
+mvn exec:java -Dexec.mainClass="com.auto-etrade.v1.terminal.ETClientApp" -Dexec.cleanupDaemonThreads="false" -e
