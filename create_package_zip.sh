@@ -1,24 +1,24 @@
 echo "Cleaning the existing repo and zip files"
-rm -rf java_example_app
+rm -rf autotrade
 rm -rf sample-client
-rm  -f java_example_app.zip
+rm  -f autotrade.zip
 echo "Cloning the repo"
 echo "Enter bitbucket username"
 read user
-git clone https://$user@bitbucket.etrade.com/scm/api/sample-client.git -b integration java_example_app
+git clone https://$user@bitbucket.etrade.com/scm/api/sample-client.git -b integration autotrade
 echo "Removing unnecessary files under the repo"
-rm -rf  java_example_app/EtradePythonClient
-rm -rf  java_example_app/README.md
-rm -rf  java_example_app/.git
+rm -rf  autotrade/EtradePythonClient
+rm -rf  autotrade/README.md
+rm -rf  autotrade/.git
 echo "Starting the zip process"
-cd java_example_app
-mv example-app-java java_example_app
-rm -rf java_example_app/.git
-zip -r java_example_app.zip java_example_app
-echo "java_example_app.zip created...."
+cd autotrade
+mv auto-etrade autotrade
+rm -rf autotrade/.git
+zip -r autotrade.zip autotrade
+echo "autotrade.zip created...."
 echo "Cleaing up the temporary files"
 rm -rf ../zip
 mkdir ../zip
-cp java_example_app.zip ../zip
+cp autotrade.zip ../zip
 cd ..
-rm -rf java_example_app
+rm -rf autotrade

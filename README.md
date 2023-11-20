@@ -15,7 +15,7 @@ The example application provides an environment for testing and validating the s
  - E*TRADE consumer key and consumer secret.
 	
  ## Setup
- - Unzip the java_example_app.zip.
+ - Unzip the autotrade.zip.
  - Update oauth keys in the oauth.properties file available with source.
 
 ## Running Code 
